@@ -1,0 +1,261 @@
+body {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: $color-text-dark;
+  background-color: #333;
+}
+
+
+//  -------------------------------button-----------------------
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 40px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: $color-text-dark;
+  background-color: $color-bg-light;
+  border: none;
+  cursor: pointer;
+  transition: $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    background-color: $color-hover;
+  }
+}
+
+
+//  -------------------------------checkbox-----------------------
+.checkbox {
+  position: relative;
+
+  input {
+    appearance: none;
+    position: absolute;
+
+    &:focus-visible+label {
+      border-color: black;
+      transition: 0.3s;
+    }
+  }
+
+  label:hover {
+    color: $color-hover;
+  }
+
+  label {
+    padding-left: 25px;
+    display: inline-block;
+    font-family: $ff-default;
+    font-size: 10px;
+    line-height: 13px;
+    color: $color-text-light;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  input:checked+label {
+    .checkbox__icon {
+      &::after {
+        border-color: $fill-dark;
+        opacity: 1;
+      }
+    }
+  }
+
+  .checkbox__icon {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: $color-bg-light;
+    z-index: 1;
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 20%;
+      width: 10px;
+      height: 7px;
+      border-left: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transform: rotate(-45deg);
+      z-index: 2;
+      transition: 0.3s;
+      opacity: 0;
+    }
+  }
+}
+
+//  -------------------------------form-input-----------------------
+
+.form-field input {
+  padding: 11px 10px;
+  width: 100%;
+  min-height: 43px;
+  color: $color-text-dark;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $color-bg-light;
+  border: none;
+
+  &::placeholder {
+    color: #999999;
+  }
+}
+
+//  -------------------------------card-cruise-----------------------
+
+
+.card-cruise {
+  padding: 30px 30px 50px;
+  background-color: $color-bg-light;
+  max-width: 360px;
+
+  svg {
+    width: 44px;
+    height: 32px;
+    fill: $fill-dark;
+    margin-bottom: 13px;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    @media (max-width: ($vp-768 - 1px)) {
+      padding: 25px 20px 20px;
+      max-width: 206px;
+
+      svg {
+        width: 36px;
+        height: 26px;
+      }
+    }
+  }
+}
+
+
+
+
+//  -------------------------------card-advantage-----------------------
+.card-advantage {
+  position: relative;
+  min-height: 386px;
+  max-width: 260px;
+  color: $color-text-light;
+
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+
+  }
+
+  .card-advantage__front,
+  .card-advantage__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+  }
+
+  .card-advantage__front {
+
+    transform: perspective(600px) rotateY(0deg);
+    cursor: auto;
+
+    h4 {
+      position: absolute;
+      bottom: 0;
+      left: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 27px;
+      color: $color-text-light;
+    }
+
+  }
+
+  .card-advantage__back {
+    padding: 30px 25px;
+    transform: perspective(600px) rotateY(180deg);
+    background-color: $color-bg-dark;
+
+    h4 {
+      margin: 0;
+      margin-bottom: 12px;
+    }
+
+    dl {
+      margin: 0;
+      margin-bottom: 25px;
+    }
+
+    dt {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    dd {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      font-size: 14px;
+      color: #d8d8d9;
+      line-height: 20px;
+    }
+  }
+}
+
+
+.card-advantage:hover>.card-advantage__front {
+  transform: perspective(600px) rotateY(-180deg)
+}
+
+.card-advantage:hover>.card-advantage__back {
+  transform: perspective(600px) rotateY(0deg)
+}
+
+.social-item {
+  width: 20px;
+  height: 20px;
+  fill: $color-hover;
+}
