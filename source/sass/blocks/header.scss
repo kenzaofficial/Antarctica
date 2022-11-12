@@ -1,0 +1,240 @@
+.header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(25, 25, 25, 0.7);
+}
+
+.header__logo {
+  position: relative;
+  transition: all 0.5s ease 0s;
+  z-index: 5;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+
+  &--dark {
+    display: none;
+  }
+}
+
+
+.header__body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 108px;
+}
+
+.menu__list {
+  padding: 0;
+  display: flex;
+  column-gap: 35px;
+  list-style: none;
+
+  @include vp-767 {
+    display: block;
+    padding-top: 10px;
+    text-align: right;
+  }
+}
+
+
+
+.menu__list li {
+  margin: 0;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.menu__list li:hover .header__link {
+  color: black;
+  background-color: #ffb233;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.header__link {
+  color: $color-text-light;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500px;
+  transition: 0.3s;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.header__link:active {
+  color: indianred;
+}
+
+.header__burger-button {
+  display: none;
+
+  @include vp-767 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    border: none;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    background-color: transparent;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header__burger-button:before,
+.header__burger-button:after {
+  content: '';
+  background-color: $fill-light;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger-button:before {
+  top: 0;
+}
+
+.header__burger-button:after {
+  bottom: 0;
+}
+
+.header__burger-button span {
+  position: absolute;
+  background-color: $fill-light;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+  transition: all 0.3s ease 0s;
+}
+
+.header-menu--active .header__burger-button span {
+  transform: scale(0);
+}
+
+.header-menu--active .header__burger-button::before {
+  transform: rotate(45deg);
+  top: 9px;
+  background-color: $fill-dark;
+}
+
+.header-menu--active .header__burger-button::after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+  background-color: $fill-dark;
+}
+
+.header__menu {
+  width: auto;
+  height: auto;
+  padding: 0;
+  position: static;
+  margin-left: auto;
+  background-color: transparent;
+
+  @include vp-767 {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 10px 10px;
+    width: 90%;
+    height: 100%;
+    padding-top: 108px;
+    background-color: brown;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 108px;
+      z-index: 10;
+    }
+  }
+}
+
+.header-menu--active .header__menu {
+  right: 0;
+}
+
+.header-menu--active .header__logo {
+  left: 10%;
+
+  &--light {
+    display: none;
+  }
+
+  &--dark {
+    display: block;
+  }
+}
+
+
+/* поведение меню при выключенном джаваскрипте */
+
+@include vp-767 {
+  .no-js .header {
+    position: static;
+  }
+
+  .no-js .header__container {
+    padding: 0;
+  }
+
+  .no-js .header__body {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .no-js .header__logo {
+    padding: 10px;
+    align-self: flex-start;
+  }
+
+  .no-js .menu__list {
+    text-align: center;
+  }
+
+  .no-js .header__menu {
+    position: static;
+    padding-top: 20px;
+  }
+}
+
+.no-js .header__menu::before {
+  display: none;
+}
+
+.no-js .header__burger-button {
+  display: none;
+}
+
+.no-js .header__menu {
+  right: 0;
+  height: auto;
+}
