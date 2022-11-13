@@ -1,0 +1,28 @@
+.about {
+  padding: 120px 0 145px;
+}
+
+
+
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.about__text {
+  padding-top: 30px;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about__img img {}
