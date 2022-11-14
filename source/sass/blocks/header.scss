@@ -8,11 +8,10 @@
 
 .header__logo {
   position: relative;
+  padding-right: 20px;
   transition: all 0.5s ease 0s;
   z-index: 5;
-
-
-
+  flex-shrink: 0;
 
   @include vp-1023 {
     width: 38px;

@@ -124,17 +124,15 @@
   }
 }
 
-//  -------------------------------card-cruise-----------------------
+//  -------------------------------card-advantage-----------------------
 
 
-.card-cruise {
-  padding: 30px 30px 50px;
+.card-advantage {
+  padding: 30px 30px 45px;
   background-color: $color-bg-light;
   max-width: 360px;
 
   svg {
-    width: 44px;
-    height: 32px;
     fill: $fill-dark;
     margin-bottom: 13px;
   }
@@ -169,8 +167,8 @@
 
 
 
-//  -------------------------------card-advantage-----------------------
-.card-advantage {
+//  -------------------------------card-cruise-----------------------
+.card-cruise {
   position: relative;
   min-height: 386px;
   max-width: 260px;
@@ -183,8 +181,8 @@
 
   }
 
-  .card-advantage__front,
-  .card-advantage__back {
+  .card-cruise__front,
+  .card-cruise__back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -193,8 +191,7 @@
     transition: transform 0.6s ease;
   }
 
-  .card-advantage__front {
-
+  .card-cruise__front {
     transform: perspective(600px) rotateY(0deg);
     cursor: auto;
 
@@ -210,8 +207,11 @@
 
   }
 
-  .card-advantage__back {
+  .card-cruise__back {
+    display: flex;
+    flex-direction: column;
     padding: 30px 25px;
+    overflow: auto;
     transform: perspective(600px) rotateY(180deg);
     background-color: $color-bg-dark;
 
@@ -246,12 +246,16 @@
 }
 
 
-.card-advantage:hover>.card-advantage__front {
+.card-cruise:hover>.card-cruise__front {
   transform: perspective(600px) rotateY(-180deg)
 }
 
-.card-advantage:hover>.card-advantage__back {
+.card-cruise:hover>.card-cruise__back {
   transform: perspective(600px) rotateY(0deg)
+}
+
+.card-cruise__btn {
+  margin-top: auto;
 }
 
 .social-item {

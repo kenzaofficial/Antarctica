@@ -5,6 +5,7 @@
   color: $color-text-light;
   background: $color-bg-dark;
 
+
   @include vp-1023 {
     box-shadow: none;
   }
@@ -56,14 +57,14 @@
 .intro__container {
   position: relative;
   margin-top: 260px;
-  margin-bottom: 200px;
+  min-height: 370px;
 }
 
 .intro__ibg img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 1100%;
   height: 100%;
   object-fit: cover;
 }
