@@ -1,0 +1,14 @@
+.advantages {
+  padding: 110px 0 120px;
+  background: #e3ecf6 url(../../img/advantages-bg.jpg) no-repeat center/ cover;
+
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 25px 0 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  list-style: none;
+}

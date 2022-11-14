@@ -1,0 +1,29 @@
+.booking {
+  padding: 50px 0;
+  background: url(../../img/booking-bg.jpg) no-repeat center / cover;
+}
+
+.booking__container {
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+
+.booking__text {
+  margin-right: auto;
+
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  p {
+    margin: 0;
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
