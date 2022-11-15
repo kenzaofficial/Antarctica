@@ -15,7 +15,7 @@
     <header class="header">
       <div class="container">
         <div class="header__body">
-          <a class="header__logo">
+          <a class="header__logo logo">
             <img src="img/svg/logo-light.svg" class="header__logo--light" alt="iceberg-logo" width="70" height="38"">
             <img src=" img/svg/logo-dark.svg" class="header__logo--dark" alt=" iceberg-logo" width="70" height="38"">
           </a>
@@ -25,16 +25,16 @@
             <nav class="header__menu menu">
               <ul class="menu__list">
                 <li>
-                  <a href="#advantages" class="header__link">Преимущества</a>
+                  <a href="#advantages" class="menu__link">Преимущества</a>
                 </li>
                 <li>
-                  <a href="#routes" class="header__link">Направления</a>
+                  <a href="#routes" class="menu__link">Направления</a>
                 </li>
                 <li>
-                  <a href="#booking" class="header__link">Ближайшие круизы</a>
+                  <a href="#booking" class="menu__link">Ближайшие круизы</a>
                 </li>
                 <li>
-                  <a href="#contacts" class="header__link">Контакты</a>
+                  <a href="#contacts" class="menu__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -354,21 +354,21 @@
                 <input id="user-name" type="text" name="user-name" required placeholder="Your name">
               </div>
               <div class="form-field">
-                <label for="user-name" class="visually-hidden">Your name</label>
-                <input id="user-name" type="text" name="user-name" required placeholder="Your name">
+                <label for="user-tel" class="visually-hidden">Your name</label>
+                <input id="user-tel" type="tel" name="user-tel" required placeholder="Your name">
               </div>
               <div class="form-field">
-                <label for="user-name" class="visually-hidden">Your name</label>
-                <input id="user-name" type="text" name="user-name" required placeholder="Your name">
+                <label for="user-mail" class="visually-hidden">Your name</label>
+                <input id="user-mail" type="email" name="user-mail" required placeholder="Your name">
               </div>
               <div class="checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox">
-                <label for="checkbox">I agree to data processing
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement">I agree to data processing
                   <span class="checkbox__icon">
                   </span>
                 </label>
               </div>
-              <button type="button" class="btn form__btn">Sumbit</button>
+              <button type="submit" class="btn form__btn">Sumbit</button>
             </fieldset>
           </form>
         </div>
@@ -378,20 +378,67 @@
           <div class="contacts__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.2520785790534!2d17.019048299999998!3d51.1038091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc20d725519e9%3A0x794ad124df18dcfc!2zR3JhYmlzennFhHNrYSAyNSwgNTMtNTAzIFdyb2PFgmF3LCDQn9C-0LvRjNGI0LA!5e0!3m2!1sru!2sua!4v1668451587080!5m2!1sru!2sua"
-              width="560" height="306" style="border:0;" allowfullscreen="" loading="lazy"
+              width="100%" height="306" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="contacts__info">
             <p>У вас ещё остались вопросы или сомнения?
               Приезжайте к нам в офис и мы вам все расскажем.</p>
-            <a href="https://goo.gl/maps/UjFStVxLq9e81H7b8" class="contacts__link" target="_blank">123</a>
+            <a href="https://goo.gl/maps/UjFStVxLq9e81H7b8" class="contacts__link" target="_blank">
+              <svg width="18" height="22">
+                <use href="img/sprite/sprite.svg#map-mark-icon"></use>
+              </svg>Wroclaw, Grabiszinska street 25, PL</a>
+            <a href="tel:54385843543" class="contacts__link">
+              <svg width="18" height="18">
+                <use href="img/sprite/sprite.svg#tel-icon"></use>
+              </svg>+(48)235-54-35</a>
           </div>
         </div>
 
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a class="footer__logo logo">
+          <img src="img/svg/logo-light.svg" alt="iceberg-logo" width="70" height="38"">
+                  </a>
+        <nav class=" footer__menu menu">
+          <ul class="menu__list">
+            <li>
+              <a href="#advantages" class="menu__link">Преимущества</a>
+            </li>
+            <li>
+              <a href="#routes" class="menu__link">Направления</a>
+            </li>
+            <li>
+              <a href="#booking" class="menu__link">Ближайшие круизы</a>
+            </li>
+            <li>
+              <a href="#contacts" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+          </nav>
+          <div class="footer__socials">
+            <a href="#" class="social__item">
+              <svg width="12" height="20">
+                <use href="img/sprite/sprite.svg#odnoklassniki-icon">
+                </use>
+              </svg>
+            </a>
+            <a href="#" class="social__item">
+              <svg width="20" height="20">
+                <use href="img/sprite/sprite.svg#unknown-social-icon">
+                </use>
+              </svg>
+            </a>
+            <a href="#" class="social__item">
+              <svg width="20" height="20">
+                <use href="img/sprite/sprite.svg#monkey-icon">
+                </use>
+              </svg>
+            </a>
+          </div>
+      </div>
     </footer>
   </div>
 

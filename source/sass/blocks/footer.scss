@@ -1,0 +1,31 @@
+.footer {
+  background-color: $color-bg-dark;
+
+}
+
+.footer__container {
+  min-height: 138px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  padding-right: 40px;
+}
+
+
+.footer__menu {}
+
+.menu__list {}
+
+.header__link {}
+
+.footer__socials {
+  margin-left: auto;
+  display: flex;
+  column-gap: 27px;
+}
+
+.social__item {
+  fill: $fill-light;
+}

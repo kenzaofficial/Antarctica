@@ -3,13 +3,36 @@
 }
 
 .contacts__container {
-  padding: 0 103px;
+  display: flex;
+  column-gap: 100px;
 }
 
-.container {}
+.contacts__info {
+  padding-top: 80px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
 
-.contacts__map {}
+  p {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
 
-.contacts__info {}
+.contacts__map {
+  max-width: 560px;
+  width: 100%;
 
-.contacts__link {}
+}
+
+.contacts__link {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}

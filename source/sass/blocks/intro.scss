@@ -58,6 +58,11 @@
   position: relative;
   margin-top: 260px;
   min-height: 370px;
+
+  @include vp-1023 {
+    margin-top: 285px;
+    min-height: 365px;
+  }
 }
 
 .intro__ibg img {
