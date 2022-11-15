@@ -131,6 +131,7 @@
   padding: 30px 30px 45px;
   background-color: $color-bg-light;
   max-width: 360px;
+  height: 100%;
 
   svg {
     fill: $fill-dark;
@@ -256,10 +257,4 @@
 
 .card-cruise__btn {
   margin-top: auto;
-}
-
-.social-item {
-  width: 20px;
-  height: 20px;
-  fill: $color-hover;
 }

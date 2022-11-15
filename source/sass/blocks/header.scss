@@ -6,26 +6,8 @@
   z-index: 10;
 }
 
-.header__logo {
-  position: relative;
-  padding-right: 20px;
-  transition: all 0.5s ease 0s;
-  z-index: 5;
-  flex-shrink: 0;
-
-  @include vp-1023 {
-    width: 38px;
-    height: 20px;
-  }
-
-  @include vp-767 {
-    width: 42px;
-    height: 22px;
-  }
-
-  &--dark {
-    display: none;
-  }
+.header__logo--dark {
+  display: none;
 }
 
 
@@ -35,9 +17,10 @@
   align-items: center;
   min-height: 108px;
 
-  @include vp-767 {
-    min-height: 75px;
+  @include vp-1023 {
+    min-height: 80px;
   }
+
 }
 
 .menu__list {
@@ -62,14 +45,14 @@
   }
 }
 
-.menu__list li:hover .header__link {
+.menu__list li:hover .menu__link {
   color: black;
   background-color: $color-hover;
   padding: 0 10px;
   border-radius: 5px;
 }
 
-.header__link {
+.menu__link {
   color: $color-text-light;
   text-decoration: none;
   font-size: 16px;
@@ -83,7 +66,7 @@
   }
 }
 
-.header__link:active {
+.menu__link:active {
   color: indianred;
 }
 
@@ -164,7 +147,7 @@
     top: 0;
     right: -100%;
     padding: 75px 15px 10px;
-    width: 90%;
+    max-width: 285px;
     height: 100%;
     background-color: $color-bg-light;
     transition: all 0.3s ease 0s;
@@ -178,8 +161,8 @@
       height: 108px;
       z-index: 10;
 
-      @include vp-767 {
-        height: 75px;
+      @include vp-1023 {
+        height: 80px;
       }
     }
   }
@@ -189,21 +172,26 @@
   right: 0;
 }
 
-.header-menu--active .header__link {
-  font-size: 18px;
-  line-height: 22px;
-  color: $color-text-dark;
+.header-menu--active .menu__link {
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-text-dark;
+  }
 }
 
 .header-menu--active .header__logo {
-  left: 10%;
+  @include vp-767 {
+    position: absolute;
+    right: 120px;
 
-  &--light {
-    display: none;
-  }
+    &--light {
+      display: none;
+    }
 
-  &--dark {
-    display: block;
+    &--dark {
+      display: block;
+    }
   }
 }
 

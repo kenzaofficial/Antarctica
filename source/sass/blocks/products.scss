@@ -5,11 +5,10 @@
 .products__container {}
 
 .products__list {
+
   padding: 0 15px;
   padding-top: 26px;
   display: flex;
-  // justify-content: center;
-  align-items: stretch;
   flex-wrap: wrap;
   list-style: none;
   gap: 30px;
@@ -17,6 +16,8 @@
 
 
 .products__item {
-  flex: 0 0 260px;
   height: 100%;
+  max-width: 260px;
+  width: 100%;
+  flex-shrink: 0;
 }
