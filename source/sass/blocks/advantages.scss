@@ -2,6 +2,10 @@
   padding: 110px 0 120px;
   background: #e3ecf6 url(../../img/advantages-bg.jpg) no-repeat center/ cover;
 
+  @include vp-1023 {
+    padding: 90px 0 80px;
+  }
+
 }
 
 .advantages__list {
