@@ -5,20 +5,40 @@
   color: $color-text-light;
   background: $color-bg-dark;
 
+  @include vp-1023 {
+    margin-top: -80px;
+  }
+
+  @include vp-767 {
+    margin-top: -60px;
+  }
+
+}
+
+.intro__container {
+  position: relative;
+  margin-top: 260px;
+  min-height: 370px;
 
   @include vp-1023 {
-    box-shadow: none;
+    min-height: 365px;
   }
 
-  .intro__text {
-    padding-left: 95px;
-    position: relative;
-    z-index: 10;
-
-    @include vp-1023 {
-      padding-left: 0;
-    }
+  @include vp-767 {
+    margin-top: 165px;
+    min-height: 320px;
   }
+}
+
+.intro__text {
+  padding-left: 95px;
+  position: relative;
+  z-index: 10;
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
+
 
   h1 {
     font-size: 54px;
@@ -27,6 +47,7 @@
     margin-bottom: 10px;
 
     @include vp-1023 {
+      margin-bottom: 12px;
       font-size: 50px;
       line-height: 61px;
     }
@@ -54,22 +75,11 @@
 
 }
 
-.intro__container {
-  position: relative;
-  margin-top: 260px;
-  min-height: 370px;
-
-  @include vp-1023 {
-    margin-top: 285px;
-    min-height: 365px;
-  }
-}
-
 .intro__ibg img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
