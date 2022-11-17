@@ -3,12 +3,25 @@
   padding: 50px;
   background-color: $color-bg-dark;
 
+  @include vp-767 {
+    padding: 35px 30px;
+  }
+
   legend {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 500;
     line-height: 27px;
     color: $color-text-light;
+
+    @include vp-1023 {
+      margin-bottom: 23px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   fieldset {
@@ -21,7 +34,21 @@
   }
 }
 
+.form-field input {
+  padding: 11px 10px;
+  width: 100%;
+  min-height: 43px;
+  color: $color-text-dark;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $color-bg-light;
+  border: none;
 
+  &::placeholder {
+    color: $color-text-dark;
+    opacity: 0.7;
+  }
+}
 
 .form__btn {
   min-height: 43px;
