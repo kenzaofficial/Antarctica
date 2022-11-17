@@ -1,6 +1,6 @@
 .products {
   padding: 85px 0 105px;
-  background-color: #333;
+  background-color: #333333;
   color: $color-text-light;
 
   @include vp-1023 {
@@ -12,19 +12,13 @@
   }
 }
 
-.products__container {}
-
 .products__list {
-
-  // padding: 0 15px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  // gap: 30px;
   row-gap: 30px;
 }
-
 
 .products__item {
   height: 100%;
@@ -32,7 +26,6 @@
   flex: 0 0 25%;
   width: 100%;
 
-  // max-width: 260px;
   @include vp-1023 {
     flex: 0 0 50%;
   }
@@ -40,6 +33,5 @@
   @include vp-767 {
     padding: 0 10px;
     flex: 0 0 100%;
-
   }
 }

@@ -1,29 +1,28 @@
-import { iosVhFix } from "./utils/ios-vh-fix";
-import { initModals } from "./modules/modals/init-modals";
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
 
 // ---------------------------------
 
-window.addEventListener("DOMContentLoaded", () => {
-  const headerBurger = document.querySelector(".header__burger-button");
-  const headerLink = document.querySelectorAll(".header__link");
-  const body = document.querySelector(".no-js");
-  const buttonUp = document.querySelector(".button-up");
-  const headerBody = document.querySelector(".header__body");
+window.addEventListener('DOMContentLoaded', () => {
+  const headerBurger = document.querySelector('.header__burger-button');
+  const headerLink = document.querySelectorAll('.header__link');
+  const body = document.querySelector('.no-js');
+  const headerBody = document.querySelector('.header__body');
 
-  if (body.classList.contains("no-js")) {
-    body.classList.remove("no-js");
+  if (body.classList.contains('no-js')) {
+    body.classList.remove('no-js');
   }
 
-  headerBurger.addEventListener("click", function () {
-    headerBody.classList.toggle("header-menu--active");
-    body.classList.toggle("scroll-lock");
+  headerBurger.addEventListener('click', function () {
+    headerBody.classList.toggle('header-menu--active');
+    body.classList.toggle('scroll-lock');
     // buttonUp.toggleAttribute("hidden");
   });
 
   for (let i = 0; i < headerLink.length; i++) {
-    headerLink[i].addEventListener("click", function () {
-      headerBody.classList.remove("header-menu--active");
-      body.classList.remove("scroll-lock");
+    headerLink[i].addEventListener('click', function () {
+      headerBody.classList.remove('header-menu--active');
+      body.classList.remove('scroll-lock');
       // buttonUp.removeAttribute("hidden");
     });
   }
@@ -37,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
     initModals();
   });
 });
