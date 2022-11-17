@@ -1,6 +1,6 @@
 .booking {
   padding: 50px 0;
-  background: url(../../img/booking-bg.jpg) no-repeat center / cover;
+  background: url("../../img/booking-bg.jpg") no-repeat center / cover;
 
   @include vp-1023 {
     padding: 85px 0 105px;
