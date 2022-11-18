@@ -1,6 +1,7 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { mobileMenu } from './utils/mobile-menu';
 import { headerScrolled } from './utils/header-scrolled';
+import { initPhoneMask } from './utils/phone-mask';
 
 // ---------------------------------
 
@@ -9,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   mobileMenu();
   headerScrolled();
+  initPhoneMask();
 
   // Modules
 
