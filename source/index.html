@@ -13,7 +13,7 @@
 <body class="no-js">
   <div class="wrapper">
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <div class="header__body">
           <a class="header__logo logo">
             <img src="img/svg/logo-light.svg" class="header__logo--light" alt="iceberg-logo" width="70" height="38">
@@ -55,6 +55,9 @@
       </section>
       <section class="about">
         <div class="container about__container">
+          <div class="about__img">
+            <img src="img/penguins.jpg" alt="three happy penguins are looking in camera" width="560" height="301">
+          </div>
           <div class="about__text">
             <h2>Путешествие на край Земли</h2>
             <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный
@@ -63,9 +66,6 @@
               котиков и многое
               другое.</p>
           </div>
-          <div class="about__img">
-            <img src="img/penguins.jpg" alt="three happy penguins are looking in camera" width="560" height="301">
-          </div>
         </div>
       </section>
       <section class="advantages" id="advantages">
@@ -73,10 +73,7 @@
           <h2>Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <div class="card-advantage">
-                <svg width="27" height="32">
-                  <use href="img/sprite/sprite.svg#ship-icon"></use>
-                </svg>
+              <div class="card-advantage" style="background-image:url(img/svg/ship-icon.svg);">
                 <h3>Небольшой круизный лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст
                   возможность насладиться
@@ -84,20 +81,15 @@
               </div>
             </li>
             <li class="advantages__item">
-              <div class="card-advantage">
-                <svg width="38" height="32">
-                  <use href="img/sprite/sprite.svg#all-inclusive-icon"></use>
-                </svg>
+              <div class="card-advantage" style="background-image:url(img/svg/all-inclusive-icon.svg);">
                 <h3>Система все включено</h3>
                 <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для
                   вас 24 часа.</p>
               </div>
             </li>
             <li class="advantages__item">
-              <div class="card-advantage">
-                <svg width="44" height="32">
-                  <use href="img/sprite/sprite.svg#boat-icon"></use>
-                </svg>
+              <div class="card-advantage" style="background-image:url(img/svg/boat-icon.svg);">
+
                 <h3>Экскурсионные туры на Zodiac</h3>
                 <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiack c опытными
                   экскурсоводами.</p>
@@ -126,14 +118,22 @@
                   <h4>Cruise "Astoria"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -155,14 +155,22 @@
                   <h4>Cruise "Elain"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -184,14 +192,22 @@
                   <h4>Cruise "Atlantis"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -213,12 +229,18 @@
                   <h4>Cruise "Odissey"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
                     <dt>Price</dt>
                     <dd>from 14500$</dd>
                   </dl>
@@ -242,14 +264,22 @@
                   <h4>Cruise "Olimpia"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -271,14 +301,22 @@
                   <h4>Cruise "Avrora"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -300,14 +338,22 @@
                   <h4>Cruise "Leonor"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -329,14 +375,22 @@
                   <h4>Cruise "Minion-1"
                   </h4>
                   <dl>
-                    <dt>Route</dt>
-                    <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
-                    <dt>Port of departure</dt>
-                    <dd>Buenos Aires</dd>
-                    <dt>Duration</dt>
-                    <dd>20 days</dd>
-                    <dt>Price</dt>
-                    <dd>from 14500$</dd>
+                    <div>
+                      <dt>Route</dt>
+                      <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+                    </div>
+                    <div>
+                      <dt>Port of departure</dt>
+                      <dd>Buenos Aires</dd>
+                    </div>
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>20 days</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd>from 14500$</dd>
+                    </div>
                   </dl>
                   <a href="#" class="btn card-cruise__btn">Submit</a>
                 </div>
@@ -379,13 +433,13 @@
           </form>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <h2 class="visually-hidden">Contacts information </h2>
         <div class="contacts__container container">
           <div class="contacts__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.2520785790534!2d17.019048299999998!3d51.1038091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc20d725519e9%3A0x794ad124df18dcfc!2zR3JhYmlzennFhHNrYSAyNSwgNTMtNTAzIFdyb2PFgmF3LCDQn9C-0LvRjNGI0LA!5e0!3m2!1sru!2sua!4v1668451587080!5m2!1sru!2sua"
-              width="506s" height="306" style="border:0;" allowfullscreen="" loading="lazy"
+              width="560" height="306" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="contacts__info">
