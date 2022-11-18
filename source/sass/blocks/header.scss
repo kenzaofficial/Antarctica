@@ -4,7 +4,15 @@
   top: 0;
   left: 0;
   z-index: 10;
+
+  &--is-scrolled {
+    border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.1);
+    background-color: #252525a2;
+
+  }
 }
+
+
 
 .header__logo--dark {
   display: none;
@@ -75,17 +83,17 @@
   transition: all 0.3s ease 0s;
 }
 
-.header-menu--active .header__burger-button span {
+.header-menu--is-active .header__burger-button span {
   transform: scale(0);
 }
 
-.header-menu--active .header__burger-button::before {
+.header-menu--is-active .header__burger-button::before {
   transform: rotate(45deg);
   top: 5px;
   background-color: $fill-dark;
 }
 
-.header-menu--active .header__burger-button::after {
+.header-menu--is-active .header__burger-button::after {
   transform: rotate(-45deg);
   bottom: 5px;
   background-color: $fill-dark;
@@ -129,11 +137,12 @@
   }
 }
 
-.header-menu--active .header__menu {
+.header-menu--is-active .header__menu {
   right: 0;
+  overflow: auto;
 }
 
-.header-menu--active .menu__link {
+.header-menu--is-active .menu__link {
   @include vp-767 {
     font-size: 18px;
     line-height: 22px;
@@ -141,7 +150,7 @@
   }
 }
 
-.header-menu--active .header__logo {
+.header-menu--is-active .header__logo {
   @include vp-767 {
     position: absolute;
     right: 120px;
@@ -156,7 +165,7 @@
   }
 }
 
-.header-menu--active .header__burger-button {
+.header-menu--is-active .header__burger-button {
   width: 13px;
 }
 
@@ -166,10 +175,13 @@
 @include vp-767 {
   .no-js .header {
     position: static;
+    padding: 10px 0 0;
+    background-color: $color-bg-gray;
   }
 
   .no-js .header__container {
     padding: 0;
+
   }
 
   .no-js .header__body {
@@ -178,29 +190,60 @@
   }
 
   .no-js .header__logo {
-    padding: 10px;
-    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $fill-light;
+    box-shadow: 0px 3px 3px -3px $fill-light;
+    margin: 0;
+
+    &--dark {
+      display: none;
+    }
   }
 
   .no-js .menu__list {
     text-align: center;
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid $fill-light;
+      box-shadow: 0px 3px 3px -3px $fill-light;
+    }
+
+    a {
+      font-size: 18px;
+      color: $color-text-light;
+
+      @include vp-520 {
+        font-size: 14px;
+      }
+    }
   }
 
   .no-js .header__menu {
     position: static;
-    padding-top: 20px;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    background-color: $color-bg-gray;
   }
-}
 
-.no-js .header__menu::before {
-  display: none;
-}
 
-.no-js .header__burger-button {
-  display: none;
-}
+  .no-js .header__menu::before {
+    display: none;
+  }
 
-.no-js .header__menu {
-  right: 0;
-  height: auto;
+  .no-js .header__burger-button {
+    display: none;
+  }
+
+  .no-js .header__menu {
+    right: 0;
+    height: auto;
+    margin: 0 auto;
+  }
 }
