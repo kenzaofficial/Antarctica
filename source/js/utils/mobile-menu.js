@@ -1,6 +1,6 @@
 function mobileMenu() {
   const headerBurger = document.querySelector('.header__burger-button');
-  const headerLink = document.querySelectorAll('.header__link');
+  const menuLink = document.querySelectorAll('.menu__link');
   const body = document.querySelector('.no-js');
   const headerBody = document.querySelector('.header__body');
 
@@ -14,8 +14,8 @@ function mobileMenu() {
     // buttonUp.toggleAttribute("hidden");
   });
 
-  for (let i = 0; i < headerLink.length; i++) {
-    headerLink[i].addEventListener('click', function () {
+  for (let i = 0; i < menuLink.length; i++) {
+    menuLink[i].addEventListener('click', function () {
       headerBody.classList.remove('header-menu--is-active');
       body.classList.remove('scroll-lock');
       // buttonUp.removeAttribute("hidden");
