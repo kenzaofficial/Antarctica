@@ -1,5 +1,6 @@
 .contacts {
   padding: 120px 0;
+  background-color: $color-bg-gray;
 
   @include vp-1023 {
     padding: 100px 0;
@@ -63,11 +64,13 @@
   display: block;
   font-size: 16px;
   line-height: 24px;
+  color: $color-bg-light;
 }
 
 .contacts__map {
   max-width: 560px;
   width: 100%;
+  overflow: hidden;
 
   @include vp-1023 {
     min-height: 335px;
