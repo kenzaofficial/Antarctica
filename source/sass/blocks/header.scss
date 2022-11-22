@@ -1,14 +1,23 @@
 .header {
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 3;
+  padding: 35px 0;
+
+  @include vp-1023 {
+    padding: 28px 0;
+  }
+
+  @include vp-767 {
+    padding: 19px 0;
+    min-height: 60px;
+  }
 
   &--is-scrolled {
     border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.1);
     background-color: #252525a2;
-
   }
 }
 
@@ -22,15 +31,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 108px;
-
-  @include vp-1023 {
-    min-height: 80px;
-  }
-
-  @include vp-767 {
-    min-height: 60px;
-  }
 }
 
 
@@ -38,9 +38,10 @@
   display: none;
 
   @include vp-767 {
-    position: relative;
+    position: absolute;
     display: block;
-    margin-left: auto;
+    right: 0;
+    top: 5px;
     border: none;
     width: 24px;
     height: 12px;
@@ -82,6 +83,10 @@
   transition: all 0.3s ease 0s;
 }
 
+// .header-menu--is-active .header__burger-button {
+//   top: 0;
+// }
+
 .header-menu--is-active .header__burger-button span {
   transform: scale(0);
 }
@@ -99,7 +104,6 @@
 }
 
 .header__menu {
-  width: 100%;
   height: auto;
   padding: 0;
   position: static;
@@ -108,43 +112,48 @@
 
   @include vp-767 {
     position: fixed;
+    width: 100%;
     top: 0;
     right: -100%;
-    padding: 75px 15px 10px;
+    padding: 50px 15px 10px;
     max-width: 285px;
     height: 100%;
     background-color: $color-bg-light;
     transition: all 0.3s ease 0s;
 
-    &::before {
+    &::before,
+    &::after {
       position: fixed;
       content: "";
-      top: 0;
       right: -100%;
       width: 100%;
-      height: 108px;
       z-index: 10;
       max-width: 285px;
-      background-color: #ffffff;
+      min-height: 60px;
+      background-color: $color-bg-light;
       transition: all 0.3s ease 0s;
 
-      @include vp-1023 {
-        height: 80px;
-      }
+    }
 
-      @include vp-767 {
-        height: 60px;
-      }
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
     }
   }
 }
 
 .header-menu--is-active .header__menu {
-  right: 0;
-  overflow: auto;
-
-  &::before {
+  @include vp-767 {
     right: 0;
+    overflow: auto;
+
+    &::before,
+    &::after {
+      right: 0;
+    }
   }
 }
 
@@ -159,7 +168,9 @@
 .header-menu--is-active .header__logo {
   @include vp-767 {
     position: absolute;
+    top: 0;
     right: 190px;
+    align-self: center;
 
     &--light {
       display: none;
@@ -170,11 +181,6 @@
     }
   }
 }
-
-.header-menu--is-active .header__burger-button {
-  width: 13px;
-}
-
 
 /* поведение меню при выключенном джаваскрипте */
 
