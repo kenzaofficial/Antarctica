@@ -93,6 +93,76 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #000, $alpha: 0.5);
+  background-color: rgba($color-default-black , $alpha: 0.5);
   z-index: 2;
+}
+
+
+.btn-back-to-top {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: $color-bg-dark;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+    right: 35px;
+    bottom: 50px;
+  }
+}
+
+.btn-back-to-top:hover {
+  background-color: $color-torch-red;
+  box-shadow: 0 0 5px 1px $color-bg-dark;
+}
+
+.btn-back-to-top::before,
+.btn-back-to-top::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+.btn-back-to-top::before {
+  width: 5px;
+  height: 19px;
+  background-color: $fill-light;
+
+  @include vp-767 {
+    width: 2px;
+    height: 19px;
+  }
+}
+
+.btn-back-to-top::after {
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid $fill-light;
+  border-left: 5px solid $fill-light;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+
+  @include vp-767 {
+    width: 12px;
+    height: 12px;
+    top: 15px;
+    border-width: 3px;
+  }
+}
+
+.btn-back-to-top--show {
+  visibility: visible;
+  opacity: 1;
 }

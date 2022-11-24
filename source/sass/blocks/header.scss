@@ -5,6 +5,7 @@
   left: 0;
   z-index: 3;
   padding: 35px 0;
+  transition: 0.5s;
 
   @include vp-1023 {
     padding: 28px 0;
@@ -16,7 +17,6 @@
   }
 
   &--is-scrolled {
-    border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.1);
     background-color: #252525a2;
   }
 }

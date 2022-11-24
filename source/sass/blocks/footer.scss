@@ -1,5 +1,10 @@
 .footer {
   background-color: $color-bg-dark;
+  padding: 50px 0;
+
+  @include vp-1023 {
+    padding: 45px 0;
+  }
 
   @include vp-767 {
     padding: 40px 0;
@@ -7,13 +12,8 @@
 }
 
 .footer__container {
-  min-height: 138px;
   display: flex;
   align-items: center;
-
-  @include vp-1023 {
-    min-height: 120px;
-  }
 
   @include vp-767 {
     flex-direction: column;
