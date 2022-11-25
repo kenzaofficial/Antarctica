@@ -2,8 +2,7 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { mobileMenu } from './utils/mobile-menu';
 import { headerScrolled } from './utils/header-scrolled';
 import { initPhoneMask } from './utils/phone-mask';
-
-// ---------------------------------
+import { backToTop } from './utils/back-to-top';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
@@ -11,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileMenu();
   headerScrolled();
   initPhoneMask();
+  backToTop();
 
   // Modules
 

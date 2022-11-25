@@ -252,14 +252,17 @@
   }
 }
 
-.card-cruise:hover>.card-cruise__front {
+.card-cruise:hover>.card-cruise__front,
+.card-cruise:focus-within>.card-cruise__front {
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.card-cruise:hover>.card-cruise__back {
+.card-cruise:hover>.card-cruise__back,
+.card-cruise:focus-within>.card-cruise__back {
   transform: perspective(600px) rotateY(0deg);
 }
 
 .card-cruise__btn {
   margin-top: auto;
 }
+
