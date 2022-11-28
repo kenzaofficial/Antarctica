@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
   headerScrolled();
   initPhoneMask();
   backToTop();
-
   // Modules
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
