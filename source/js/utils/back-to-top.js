@@ -19,12 +19,10 @@ function backToTop() {
     } else {
       goTopBtn.classList.remove('btn-back-to-top--green');
     }
-  }
-
+  
   goTopBtn.addEventListener('click', () => {
     intro.scrollIntoView({ block: 'center', behavior: 'smooth' });
   });
-
   window.addEventListener('scroll', trackScroll);
 }
 export { backToTop };
