@@ -19,10 +19,18 @@ function backToTop() {
     } else {
       goTopBtn.classList.remove('btn-back-to-top--green');
     }
-  
+
+    if (scrolled + window.innerHeight > totalHeight - footer.clientHeight / 2) {
+      goTopBtn.style.opacity = 0;
+    } else {
+      goTopBtn.style.opacity = 1;
+    }
+  }
+
   goTopBtn.addEventListener('click', () => {
     intro.scrollIntoView({ block: 'center', behavior: 'smooth' });
   });
   window.addEventListener('scroll', trackScroll);
 }
+
 export { backToTop };
