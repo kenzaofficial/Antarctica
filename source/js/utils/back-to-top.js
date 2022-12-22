@@ -3,11 +3,11 @@ function backToTop() {
   const intro = document.getElementById('intro');
 
   function trackScroll() {
-    let scrolled = window.pageYOffset;
-    let coords = document.documentElement.clientHeight / 2;
-    let footer = document.querySelector('.footer');
-    let totalHeight = document.body.scrollHeight;
-    let footerCoords = totalHeight - footer.clientHeight;
+    const scrolled = window.pageYOffset;
+    const coords = document.documentElement.clientHeight / 2;
+    const footer = document.querySelector('.footer');
+    const totalHeight = document.body.scrollHeight;
+
     if (scrolled > coords) {
       goTopBtn.classList.add('btn-back-to-top--show');
     }
