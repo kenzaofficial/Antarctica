@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ui-kit</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="ui-kit-wrapper">
+  <button type="button" class="btn">Sumbit</button>
+  <div class="checkbox">
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox">I agree to data processing
+      <span class="checkbox__icon">
+      </span>
+    </label>
+  </div>
+  <div class="form-field">
+    <label for="user-name" class="visually-hidden">Your name</label>
+    <input id="user-name" type="text" name="user-name" required placeholder="Your name">
+  </div>
+
+  <div class="card-advantage">
+    <svg>
+      <use href="img/sprite/sprite.svg#ship-icon"></use>
+    </svg>
+    <h3>Small cruise ship</h3>
+    <p>With a capacity of just 300 guests, a cruise ship will help you avoid noise and queues and give you the
+      opportunity to
+      enjoy the views and nature.</p>
+  </div>
+
+  <div class="card-cruise">
+    <!-- frontside of card -->
+    <div class="card-cruise__front">
+      <picture>
+        <!-- <source media="(max-width: 767.9px)" type="image/webp" srcset="img/logo-short.webp 1x, img/logo-short2x.webp 2x">
+      <source media="(max-width: 767.9px)" type="image/png" srcset="img/logo-short.png 1x, img/logo-short2x.png 2x"> -->
+        <source type="image/webp" srcset="img/astoria.webp 1x, img/astoria2x.webp 2x">
+        <img width="260" height="386" src="img/astoria.jpg" srcset="img/astoria2x.jpg 2x" alt="iceberg">
+      </picture>
+      <h4>Cruise "Astoria"
+      </h4>
+    </div>
+
+    <!-- backside of card -->
+    <div class="card-cruise__back">
+      <h4>Cruise "Astoria"
+      </h4>
+      <dl>
+        <dt>Route</dt>
+        <dd>Argentina - Falkland islands - Antarctica - Chile</dd>
+        <dt>Port of departure</dt>
+        <dd>Buenos Aires</dd>
+        <dt>Duration</dt>
+        <dd>20 days</dd>
+        <dt>Price</dt>
+        <dd>from 14500$</dd>
+      </dl>
+      <a href="#" class="btn card-cruise__btn">Submit</a>
+    </div>
+
+  </div>
+  <svg>
+    <use href="img/sprite/sprite.svg#odnoklassniki-icon">
+    </use>
+  </svg>
+
+
+</body>
+
+</html>
